@@ -47,7 +47,7 @@ MeetRun = Template.paragraphs[23].runs[28]
 ContactRun = Template.paragraphs[28].runs[8]
 
 
-for i in range(1,31):
+for i in range(1,2):
 	Package = str(Data.cell(i,PackageCol).value)
 	CName = str(Data.cell(i,CNameCol).value)
 	Rent = str(Data.cell(i,PriceCol).value)
