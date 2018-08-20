@@ -18,10 +18,15 @@ from __future__ import print_function
 doc = docx.Document(‘Template.docx’）
 
 for i in range(len(doc.paragraphs)):
-  print('\n'+str(i)) #number display on top of the actual paragraph is the para value
+
+  	print('\n'+str(i)) #number display on top of the actual paragraph is the para value
+
 	for j in range(len(doc.paragraphs[i].runs)):
-    #number inside <> is the run value for the following words
+
+		#number inside <> is the run value for the following words
+
 		print('<' + str(j)+ '>' +doc.paragraphs[i].runs[j].text , end = '')
-   
+
+
 The best way to find the correct place to put your data value is edit the template document and add a placeholder (bold and italic it so it is a new run)
 
