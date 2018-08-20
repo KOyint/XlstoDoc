@@ -12,20 +12,15 @@ Result :
  the more troublesome step is to update the para&run value ( python-docx's function, the para & run value will determind where you will add your data to on the doc file) 
  you can use some for loop function like:
  
-#add below if using py2.x
-from __future__ import print_function
+	#add below if using py2.x
+	from __future__ import print_function
 
-doc = docx.Document(‘Template.docx’）
-
-for i in range(len(doc.paragraphs)):
-
-  	print('\n'+str(i)) #number display on top of the actual paragraph is the para value
-
-	for j in range(len(doc.paragraphs[i].runs)):
-
-		#number inside <> is the run value for the following words
-
-		print('<' + str(j)+ '>' +doc.paragraphs[i].runs[j].text , end = '')
+	doc = docx.Document(‘Template.docx’）
+	for i in range(len(doc.paragraphs)):
+  		print('\n'+str(i)) #number display on top of the actual paragraph is the para value
+		for j in range(len(doc.paragraphs[i].runs)):
+			#number inside <> is the run value for the following words
+			print('<' + str(j)+ '>' +doc.paragraphs[i].runs[j].text , end = '')
 
 
 The best way to find the correct place to put your data value is edit the template document and add a placeholder (bold and italic it so it is a new run)
