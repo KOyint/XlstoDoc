@@ -37,6 +37,7 @@ EmailCol = 11
 MeetCol = 12
 
 #para & run value for doc editing (ownself found out using py docx)
+#code for going thru template doc on ReadMe
 
 CNameRun = Template.paragraphs[10].runs[13]
 PackageRun = Template.paragraphs[16].runs[9]
@@ -47,7 +48,9 @@ MeetRun = Template.paragraphs[23].runs[28]
 ContactRun = Template.paragraphs[28].runs[8]
 
 
-for i in range(1,2):
+for i in range(1,2): 
+	
+	#load the values in each row
 	Package = str(Data.cell(i,PackageCol).value)
 	CName = str(Data.cell(i,CNameCol).value)
 	Rent = str(Data.cell(i,PriceCol).value)
@@ -58,6 +61,7 @@ for i in range(1,2):
 	Meet = str(Data.cell(i,MeetCol).value)
 	Contact = str(Data.cell(i,ContactCol).value)
 	
+	#key into the template doc 
 	ClearAndAdd(CNameRun,CName)
 	ClearAndAdd(PackageRun,Package)
 	ClearAndAdd(RentRun,"$"+Rent)
